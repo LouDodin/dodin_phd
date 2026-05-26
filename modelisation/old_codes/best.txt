@@ -1,0 +1,36 @@
+Parameters that we had decided with David :
+const μ   = 0.7
+const k   = 1e9
+const φi  = 2.2e-7
+const β   = 52
+const δ   = 1.5e-2
+const η   = 3
+const εdp = 0.66
+const σdp = 0.26
+const μ_r = 0.7
+const k_r = 1e9
+const ν   = 1
+const α   = 1e-3
+
+
+Parameters obtained by fitting on first cycle of 20°C :
+
+μ = 0.538001865245161
+k = 9.784708604680645e7
+
+SIVi :
+φi => 1.0814785163571014e-8
+β => 69.99999999999996
+δ => 0.00010000000000000026
+η => 39.99999999999998
+
+SIRVi_SR : 
+φi => 1.4247469172691298e-8
+β => 69.99999999999996
+δ => 0.00010000000056657746
+η => 5.606949463237242
+μ_r => 0.5503400907580093
+k_r => 6.459945866887754e7
+α => 2.4990865344929837e-5
+
+

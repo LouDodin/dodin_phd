@@ -1,0 +1,19 @@
+Virophage protein,T0 Host Read,% of identical positions,Alignment length,Nb of mismatch,Nb of gap openings,Prot start,Prot end,Read start,Read end,Expect value,Bit score
+"Gezel_DNA_polymerase-helicase ","AVITI2_Rosalind:SIDEA_ROSA_2449538513:2449538513:2:11203:4631:1441 ","50.000 ","40 ","20 ","0 ","103 ","142 ","139 ","20 ","1.30e-04 ",45.4
+"Gezel_DNA_polymerase-helicase ","AVITI2_Rosalind:SIDEB_ROSALIND_2449469394:2449469394:2:21105:1233:2908 ","50.000 ","34 ","17 ","0 ","85 ","118 ","117 ","16 ","0.004 ",41.6
+"Gezel_DNA_polymerase-helicase ","AVITI2_Rosalind:SIDEA_ROSA_2449538513:2449538513:2:10805:0363:0858 ","48.276 ","29 ","15 ","0 ","84 ","112 ","63 ","149 ","0.29 ",36.2
+"Gezel_DNA_polymerase-helicase ","AVITI2_Rosalind:SIDEA_ROSA_2449538513:2449538513:2:10402:3751:3602 ","47.170 ","53 ","24 ","1 ","103 ","155 ","150 ","4 ","3.82e-06 ",49.7
+"Gezel_DNA_polymerase-helicase ","AVITI2_Rosalind:SIDEA_ROSA_2449538513:2449538513:2:20703:3436:3332 ","47.170 ","53 ","24 ","1 ","103 ","155 ","149 ","3 ","3.82e-06 ",49.7
+"Gezel_DNA_polymerase-helicase ","AVITI2_Rosalind:SIDEB_ROSALIND_2449469394:2449469394:2:12004:1077:1014 ","46.429 ","28 ","15 ","0 ","85 ","112 ","84 ","1 ","1.0 ",34.7
+"Gezel_DNA_polymerase-helicase ","AVITI2_Rosalind:SIDEB_ROSALIND_2449469394:2449469394:2:20903:0730:2142 ","46.341 ","41 ","22 ","0 ","102 ","142 ","13 ","135 ","5.69e-04 ",43.5
+"Gezel_DNA_polymerase-helicase ","AVITI2_Rosalind:SIDEA_ROSA_2449538513:2449538513:2:10805:4467:3625 ","46.154 ","52 ","24 ","1 ","103 ","154 ","7 ","150 ","2.96e-05 ",47.4
+"Gezel_DNA_polymerase-helicase ","AVITI2_Rosalind:SIDEB_ROSALIND_2449469394:2449469394:2:10803:0539:3073 ","46.154 ","52 ","24 ","1 ","104 ","155 ","149 ","6 ","1.82e-05 ",47.8
+"Gezel_DNA_polymerase-helicase ","AVITI2_Rosalind:SIDEB_ROSALIND_2449469394:2449469394:2:21004:5272:2936 ","46.000 ","50 ","23 ","1 ","106 ","155 ","149 ","12 ","3.16e-04 ",44.3
+"Gezel_DNA_polymerase-helicase ","AVITI2_Rosalind:SIDEB_ROSALIND_2449469394:2449469394:2:20203:1244:1933 ","45.238 ","42 ","23 ","0 ","103 ","144 ","25 ","150 ","7.64e-04 ",43.1
+"Gezel_DNA_polymerase-helicase ","AVITI2_Rosalind:SIDEB_ROSALIND_2449469394:2449469394:2:20804:3173:3380 ","45.238 ","42 ","23 ","0 ","85 ","126 ","129 ","4 ","5.06e-04 ",43.9
+"Gezel_DNA_polymerase-helicase ","AVITI2_Rosalind:SIDEA_ROSA_2449538513:2449538513:2:21503:2796:2237 ","45.098 ","51 ","24 ","1 ","105 ","155 ","150 ","10 ","1.11e-04 ",45.8
+"Gezel_DNA_polymerase-helicase ","AVITI2_Rosalind:SIDEA_ROSA_2449538513:2449538513:2:12101:3812:2899 ","44.444 ","45 ","25 ","0 ","85 ","129 ","138 ","4 ","2.17e-05 ",47.8
+"Gezel_DNA_polymerase-helicase ","AVITI2_Rosalind:SIDEA_ROSA_2449538513:2449538513:2:20304:5339:1168 ","44.231 ","52 ","25 ","1 ","104 ","155 ","150 ","7 ","8.06e-05 ",46.2
+"Gezel_DNA_polymerase-helicase ","AVITI2_Rosalind:SIDEA_ROSA_2449538513:2449538513:2:11905:3351:0166 ","44.000 ","50 ","28 ","0 ","87 ","136 ","150 ","1 ","2.61e-06 ",50.4
+"Gezel_DNA_polymerase-helicase ","AVITI2_Rosalind:SIDEA_ROSA_2449538513:2449538513:2:11603:0507:2188 ","39.216 ","51 ","27 ","1 ","111 ","161 ","150 ","10 ","0.062 ",37.7
+"Maverick_putative_rve_super_family_integrase ","AVITI2_Rosalind:SIDEA_ROSA_2449538513:2449538513:2:20205:4678:2682 ","30.435 ","46 ","32 ","0 ","105 ","150 ","12 ","149 ","4.3 ",32.0

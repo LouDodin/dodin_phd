@@ -1,0 +1,84 @@
+============================================================
+  RUN LOG
+  Date     : 2026-04-04 09:42:42
+  Run ID   : fitted_parameters/SIViVdp/20260404-094242_fit1_plot5
+============================================================
+
+--- CHOICES ---
+  parametrisation : fitted
+  fit cycles      : 1
+  plot cycles     : 5
+  model           : SIViVdp
+
+--- MODEL INFO ---
+  fit_params  : [:φi, :β, :δ, :η, :εdp, :σdp]
+  full_params : [:μ, :k, :φi, :β, :δ, :η, :εdp, :σdp]
+
+--- FIXED PARAMETERS ---
+  μ = 0.538001865245161
+  k = 9.784708604680645e7
+
+--- INITIAL PARAMETER GUESSES & BOUNDS ---
+  param     init            lower           upper
+  φi        1.3e-8          1.0e-8          1.0e-7
+  β         50.0            45.0            70.0
+  δ         0.001           0.0001          0.01
+  η         10.0            1.0             40.0
+  εdp       0.01            0.001           0.1
+  σdp       0.001           1.0e-6          0.1
+
+--- OPTIMISATION RESULTS ---
+  Converged   : true
+  Iterations  : 227736
+  Final error : 45.58849251591878
+
+  Optimized parameter values:
+  param     fitted          init            lower           upper
+  φi        1.26233e-8      1.3e-8          1.0e-8          1.0e-7
+  β         70.0            50.0            45.0            70.0
+  δ         0.0001          0.001           0.0001          0.01
+  η         40.0            10.0            1.0             40.0
+  εdp       0.1             0.01            0.001           0.1
+  σdp       0.1             0.001           1.0e-6          0.1
+
+  Full p_opt vector (order: [:μ, :k, :φi, :β, :δ, :η, :εdp, :σdp]):
+    μ = 0.538001865245161
+    k = 9.784708604680645e7
+    φi = 1.2623328301062342e-8
+    β = 69.99999999999996
+    δ = 0.00010000000000000026
+    η = 39.99999999999998
+    εdp = 0.09999999999999998
+    σdp = 0.09999999999999998
+
+--- SIMULATION ---
+  Dilution logic  : proportions from end of cycle, applied to experimental H0/V0
+  H0_init = 1.1053196716589862e6  (cycle 1)
+  V0_init = 4.3226784765279e6  (cycle 1)
+  t_dilution      = [0.0, 24.770833333333332, 34.770833333333336, 43.791666666666664, 56.791666666666664, 66.79166666666667]
+  Ev fixed at 1e-6 at each cycle start
+
+  cycle    H0_exp        prop_S      prop_I      prop_R      V0_exp        prop_Vi     prop_Vdp    prop_Vdip
+  1        1.105e6       0.991       0.008974    0.0         4.323e6       0.09916     0.9008      0.0
+  2        1.321e6       0.9532      0.04681     0.0         1.391e7       0.4179      0.5821      0.0
+  3        971200.0      0.9561      0.04394     0.0         2.73e6        0.4907      0.5093      0.0
+  4        1.704e6       0.972       0.02796     0.0         6.912e6       0.2947      0.7053      0.0
+  5        1.121e6       1.0         0.0         0.0         5.626e6       1.0         0.0         0.0
+
+--- STEP TIMINGS ---
+  Load fitting data              : 0.0 s
+  Load model                     : 0.01 s
+  Load scatter data              : 0.02 s
+  Optimisation                   : 135.05 s
+  Plot                           : 0.17 s
+  Set parameters                 : 0.01 s
+  Simulation                     : 0.12 s
+  TOTAL                          : 135.55 s
+
+--- OUTPUT FILES ---
+  plot : /Users/loudodin/Documents/GitHub/louthese/modelisation/output/fitted_parameters/SIViVdp/20260404-094242_fit1_plot5_plot.png
+  log  : /Users/loudodin/Documents/GitHub/louthese/modelisation/output/fitted_parameters/SIViVdp/20260404-094242_fit1_plot5_log.txt
+
+============================================================
+  END OF LOG
+============================================================

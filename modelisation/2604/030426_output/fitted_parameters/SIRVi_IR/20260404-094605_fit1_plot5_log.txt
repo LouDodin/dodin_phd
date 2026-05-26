@@ -1,0 +1,87 @@
+============================================================
+  RUN LOG
+  Date     : 2026-04-04 09:46:05
+  Run ID   : fitted_parameters/SIRVi_IR/20260404-094605_fit1_plot5
+============================================================
+
+--- CHOICES ---
+  parametrisation : fitted
+  fit cycles      : 1
+  plot cycles     : 5
+  model           : SIRVi_IR
+
+--- MODEL INFO ---
+  fit_params  : [:φi, :β, :δ, :η, :μ_r, :k_r, :α]
+  full_params : [:μ, :k, :φi, :β, :δ, :η, :μ_r, :k_r, :α]
+
+--- FIXED PARAMETERS ---
+  μ = 0.538001865245161
+  k = 9.784708604680645e7
+
+--- INITIAL PARAMETER GUESSES & BOUNDS ---
+  param     init            lower           upper
+  φi        1.3e-8          1.0e-8          1.0e-7
+  β         50.0            45.0            70.0
+  δ         0.001           0.0001          0.01
+  η         10.0            1.0             40.0
+  μ_r       0.5             0.001           1.0
+  k_r       1.0e8           1.0e6           1.0e9
+  α         0.001           1.0e-5          0.1
+
+--- OPTIMISATION RESULTS ---
+  Converged   : true
+  Iterations  : 303407
+  Final error : 8.74277887755937
+
+  Optimized parameter values:
+  param     fitted          init            lower           upper
+  φi        1.08679e-8      1.3e-8          1.0e-8          1.0e-7
+  β         70.0            50.0            45.0            70.0
+  δ         0.0001          0.001           0.0001          0.01
+  η         40.0            10.0            1.0             40.0
+  μ_r       0.552288        0.5             0.001           1.0
+  k_r       6.40474e7       1.0e8           1.0e6           1.0e9
+  α         0.00220193      0.001           1.0e-5          0.1
+
+  Full p_opt vector (order: [:μ, :k, :φi, :β, :δ, :η, :μ_r, :k_r, :α]):
+    μ = 0.538001865245161
+    k = 9.784708604680645e7
+    φi = 1.0867941100971842e-8
+    β = 69.99999999999996
+    δ = 0.00010000000000000026
+    η = 39.99999999999998
+    μ_r = 0.5522880782822479
+    k_r = 6.404738705150799e7
+    α = 0.00220193477181263
+
+--- SIMULATION ---
+  Dilution logic  : proportions from end of cycle, applied to experimental H0/V0
+  H0_init = 1.1053196716589862e6  (cycle 1)
+  V0_init = 4.3226784765279e6  (cycle 1)
+  t_dilution      = [0.0, 24.770833333333332, 34.770833333333336, 43.791666666666664, 56.791666666666664, 66.79166666666667]
+  Ev fixed at 1e-6 at each cycle start
+
+  cycle    H0_exp        prop_S      prop_I      prop_R      V0_exp        prop_Vi     prop_Vdp    prop_Vdip
+  1        1.105e6       0.0         0.0         1.0         4.323e6       1.0         0.0         0.0
+  2        1.321e6       4.821e-13   0.0         1.0         1.391e7       1.0         0.0         0.0
+  3        971200.0      5.298e-13   0.0         1.0         2.73e6        1.0         0.0         0.0
+  4        1.704e6       1.017e-12   0.0         1.0         6.912e6       1.0         0.0         0.0
+  5        1.121e6       1.0         0.0         0.0         5.626e6       1.0         0.0         0.0
+
+--- STEP TIMINGS ---
+  Load fitting data              : 0.0 s
+  Load model                     : 0.02 s
+  Load scatter data              : 0.01 s
+  Optimisation                   : 169.9 s
+  Plot                           : 0.21 s
+  Set parameters                 : 0.01 s
+  Simulation                     : 0.12 s
+  TOTAL                          : 170.4 s
+
+--- OUTPUT FILES ---
+  plot : /Users/loudodin/Documents/GitHub/louthese/modelisation/output/fitted_parameters/SIRVi_IR/20260404-094605_fit1_plot5_plot.png
+  log  : /Users/loudodin/Documents/GitHub/louthese/modelisation/output/fitted_parameters/SIRVi_IR/20260404-094605_fit1_plot5_log.txt
+
+============================================================
+  END OF LOG
+============================================================

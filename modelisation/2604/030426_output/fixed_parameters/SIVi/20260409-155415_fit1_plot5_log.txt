@@ -1,0 +1,58 @@
+============================================================
+  RUN LOG
+  Date     : 2026-04-09 15:54:15
+  Run ID   : fixed_parameters/SIVi/20260409-155415_fit1_plot5
+============================================================
+
+--- CHOICES ---
+  parametrisation : fixed
+  fit cycles      : 1
+  plot cycles     : 5
+  model           : SIVi
+
+--- MODEL INFO ---
+  fit_params  : [:φi, :β, :δ, :η]
+  full_params : [:μ, :k, :φi, :β, :δ, :η]
+
+--- FIXED PARAMETERS ---
+  μ = 0.4000000000000001
+  k = 9.784708604680645e7
+
+--- FIXED PARAMETER VALUES ---
+  φi = 1.1156323227682514e-8
+  β = 69.99999999999996
+  δ = 0.009999999999999934
+  η = 39.99999999999991
+  εdp = 0.66
+  σdp = 0.26
+  μ_r = 0.7
+  k_r = 1.0e9
+  ν = 1
+  α = 0.001
+
+--- SIMULATION ---
+  Dilution logic  : proportions from end of cycle, applied to experimental H0/V0
+  t_dilution      = [0.0, 24.770833333333332, 34.770833333333336, 43.791666666666664, 56.791666666666664, 66.79166666666667]
+  Ev fixed at 1e-6 at each cycle start
+
+  cycle    H0_exp        prop_S      prop_I      prop_R      V0_exp        prop_Vi     prop_Vdp    prop_Vdip
+  1        1.105e6       1.0         0.0         0.0         4.323e6       1.0         0.0         0.0
+  2        1.321e6       0.9484      0.05165     0.0         1.391e7       1.0         0.0         0.0
+  3        971200.0      0.9488      0.05125     0.0         2.73e6        1.0         0.0         0.0
+  4        1.704e6       0.9432      0.0568      0.0         6.912e6       1.0         0.0         0.0
+
+--- STEP TIMINGS ---
+  Load model                     : 0.02 s
+  Load scatter data              : 0.03 s
+  Plot                           : 0.83 s
+  Set parameters                 : 0.0 s
+  Simulation                     : 0.65 s
+  TOTAL                          : 1.64 s
+
+--- OUTPUT FILES ---
+  plot : /Users/loudodin/Documents/GitHub/louthese/modelisation/030426_output/fixed_parameters/SIVi/20260409-155415_fit1_plot5_plot.png
+  log  : /Users/loudodin/Documents/GitHub/louthese/modelisation/030426_output/fixed_parameters/SIVi/20260409-155415_fit1_plot5_log.txt
+
+============================================================
+  END OF LOG
+============================================================

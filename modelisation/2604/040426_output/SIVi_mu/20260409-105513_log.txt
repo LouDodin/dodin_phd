@@ -1,0 +1,24 @@
+Run ID: 20260409-105513
+Model: SIVi_mu
+n_fit: 300
+Fit cycles: 1
+Plot cycles: 5
+
+Step timings (s):
+  Load scatter data: 0.02
+  Simulation: 0.65
+  Optimization: 1.44
+  Plot: 3.58
+  Load model: 0.02
+  Set parameters: 0.03
+  Load fitting data: 0.0
+
+Fixed parameters:
+  k = 9.784708604680645e7
+
+Fitted parameters with bounds:
+  μ: lower=0.1, upper=0.9
+  φi: lower=1.0e-10, upper=1.0e-6
+  β: lower=4.0, upper=100.0
+  δ: lower=1.0e-8, upper=0.01
+  η: lower=1.0, upper=100.0
