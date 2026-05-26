@@ -4,8 +4,6 @@
 
 * Advancement file : [https://tinyurl.com/bddhvbj4](https://tinyurl.com/bddhvbj4)
 
-* LateX file : [https://plmlatex.math.cnrs.fr/8411856182frcrqbxmcnqj](https://plmlatex.math.cnrs.fr/8411856182frcrqbxmcnqj)
-
 * bibliography : shared papers
 
 * bioinformatics :
@@ -14,8 +12,8 @@
     * boxplot_cyto_vs_videodrop
     * virophage
 
-* modelisation :
-    * see [README.md](modelisation/README.md)
+* modelisation
+    * LateX file for modelisation follow-up : [https://plmlatex.math.cnrs.fr/8411856182frcrqbxmcnqj](https://plmlatex.math.cnrs.fr/8411856182frcrqbxmcnqj)
 
 * .venv : Python virtual environment
 * requirements.txt : Python packages

@@ -57,8 +57,8 @@ for rep in replicates
     t_H_prev_end = nothing
 
     for cycle in 1:n_cycles
-        df_H = CSV.read(joinpath(@__DIR__, "input/xp_input_20/hostData_coevoCondition_Temperature20_Replicate$(rep)_Cycle$(cycle).csv"), DataFrame)
-        df_V = CSV.read(joinpath(@__DIR__, "input/xp_input_20/virusData_coevoCondition_Temperature20_Replicate$(rep)_Cycle$(cycle).csv"), DataFrame)
+        df_H = CSV.read(joinpath(@__DIR__, "../input/xp_input_20/hostData_coevoCondition_Temperature20_Replicate$(rep)_Cycle$(cycle).csv"), DataFrame)
+        df_V = CSV.read(joinpath(@__DIR__, "../input/xp_input_20/virusData_coevoCondition_Temperature20_Replicate$(rep)_Cycle$(cycle).csv"), DataFrame)
 
         t_H = df_H[:, 1] ./ 24
         H   = df_H[:, 2]
