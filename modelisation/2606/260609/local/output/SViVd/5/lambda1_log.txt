@@ -1,0 +1,43 @@
+===== Run log =====
+Date        : 2026-06-10T10:21:32.875
+Model       : SViVd
+Model file  : /Users/loudodin/PhD/GitHub/dodin_phd/modelisation/2606/260609/local/models/model_SViVd.jl
+λ           : 1
+n_runs      : 10
+cycles_fit  : 5
+cycles_sim  : 5
+replicates  : ["A", "B", "C"]
+ϕ_combi     : 3_2_2_3_2
+
+===== Fixed parameters =====
+  r = 0.5592225270686286
+  K = 7.29695252684594e7
+  β = 144.0
+  δ = 0.02
+
+===== Search bounds =====
+  log-space fit : true
+  φ  ∈ [1.0e-14, 1.0e-5]  — interaction rate
+  epsilon  ∈ [1.0e-6, 1.0]  — fraction of infective virions
+
+===== All runs =====
+  Run 1 (seed=1001) : loss=114.47380852862914  φ=1.1866642537821428e-7  epsilon=0.0009274609266907458
+  Run 2 (seed=1002) : loss=114.47380851242788  φ=1.186664165760239e-7  epsilon=0.0009274603492568491
+  Run 3 (seed=1003) : loss=114.4738085145769  φ=1.186671989334979e-7  epsilon=0.0009274388228882168
+  Run 4 (seed=1004) : loss=114.47380853136632  φ=1.1866683550324432e-7  epsilon=0.0009274540618493837
+  Run 5 (seed=1005) : loss=114.47380852382001  φ=1.1866692349138143e-7  epsilon=0.0009274439224116727
+  Run 6 (seed=1006) : loss=114.47380853096735  φ=1.1866656268992827e-7  epsilon=0.000927454377616766
+  Run 7 (seed=1007) : loss=114.47380852109696  φ=1.186671268837715e-7  epsilon=0.0009274521704077212
+  Run 8 (seed=1008) : loss=114.4738085201205  φ=1.1866732119895904e-7  epsilon=0.0009274479053094988
+  Run 9 (seed=1009) : loss=114.4738085226908  φ=1.186675189694259e-7  epsilon=0.000927438435754299
+  Run 10 (seed=1010) : loss=114.47380852350976  φ=1.1866705614879262e-7  epsilon=0.0009274560428416558
+
+===== Best result =====
+  Loss = 114.47380851242788
+  φ = 1.186664165760239e-7  (interaction rate)
+  epsilon = 0.0009274603492568491  (fraction of infective virions)
+
+===== Polynomial =====
+  File        : /Users/loudodin/PhD/GitHub/dodin_phd/modelisation/2606/260609/local/../../260604/genotoul/output/nint_3_2_2_3_2/polynomial.txt
+  n_intervals : 17
+  best_fitness : 3.37917394

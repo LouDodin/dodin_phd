@@ -1,0 +1,43 @@
+===== Run log =====
+Date        : 2026-06-10T09:19:48.410
+Model       : SRVi
+Model file  : /Users/loudodin/PhD/GitHub/dodin_phd/modelisation/2606/260609/local/models/model_SRVi.jl
+λ           : 1
+n_runs      : 10
+cycles_fit  : 5
+cycles_sim  : 5
+replicates  : ["A", "B", "C"]
+ϕ_combi     : 3_2_2_3_2
+
+===== Fixed parameters =====
+  r = 0.574619342477644
+  K = 6.675449070379925e7
+  β = 144.0
+  δ = 0.02
+
+===== Search bounds =====
+  log-space fit : true
+  α  ∈ [1.0e-15, 0.001]  — mutation rate S→R
+  φ  ∈ [1.0e-14, 1.0e-7]  — interaction rate
+
+===== All runs =====
+  Run 1 (seed=1001) : loss=189.53566967074687  α=6.195103651221584e-10  φ=8.099409411320076e-11
+  Run 2 (seed=1002) : loss=189.53418106374068  α=1.369411042830437e-13  φ=8.102432823198298e-11
+  Run 3 (seed=1003) : loss=189.53432494267736  α=1.0083287472318462e-15  φ=8.112228749521654e-11
+  Run 4 (seed=1004) : loss=189.5345440428003  α=1.5154780477593159e-10  φ=8.102149793502142e-11
+  Run 5 (seed=1005) : loss=189.5344279834972  α=1.86065508889735e-11  φ=8.114008986115835e-11
+  Run 6 (seed=1006) : loss=189.53483774896696  α=2.742677693540486e-10  φ=8.10200295388245e-11
+  Run 7 (seed=1007) : loss=189.53418066066547  α=1.809686720737163e-15  φ=8.102444190067978e-11
+  Run 8 (seed=1008) : loss=189.53418066278883  α=2.6836828337015706e-15  φ=8.102445531197139e-11
+  Run 9 (seed=1009) : loss=189.53418278854937  α=6.880034728640052e-13  φ=8.102363527012956e-11
+  Run 10 (seed=1010) : loss=189.53418941064663  α=3.597609681609024e-12  φ=8.102353497568947e-11
+
+===== Best result =====
+  Loss = 189.53418066066547
+  α = 1.809686720737163e-15  (mutation rate S→R)
+  φ = 8.102444190067978e-11  (interaction rate)
+
+===== Polynomial =====
+  File        : /Users/loudodin/PhD/GitHub/dodin_phd/modelisation/2606/260609/local/../../260604/genotoul/output/nint_3_2_2_3_2/polynomial.txt
+  n_intervals : 17
+  best_fitness : 3.37917394

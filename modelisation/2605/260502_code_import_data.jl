@@ -5,7 +5,8 @@ using DataFrames
 using Plots
 using Measures
 
-## ===== Infos =====
+## ===== Import data =====
+## --- Infos ---
 color_A = RGB(0.6, 0.8, 1.0)
 color_B = RGB(31/255, 119/255, 180/255)
 color_C = RGB(0.0, 0.3, 0.7) 
@@ -15,7 +16,7 @@ replicate_colors = [color_A, color_B, color_C]
 replicates = ["A", "B", "C"]
 n_cycles = 5
 
-## ===== Input =====
+## --- Import ---
 # Store time and abundance vectors per replicate
 t_H_all = Dict{String, Vector{Float64}}()
 H_all   = Dict{String, Vector{Float64}}()
@@ -61,7 +62,7 @@ for rep in replicates
     V_all[rep]   = V_rep
 end
 
-## ===== CHECK THE DATA =====
+## --- Check ---
 pl_data = plot(layout=(1,2), size=(900,300), margins=5mm, legend=:topright)
 
 for (i, rep) in enumerate(replicates)

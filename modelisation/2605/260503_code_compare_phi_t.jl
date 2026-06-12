@@ -160,12 +160,10 @@ function parse_polynome(filepath::String)
 end
 
 n_interv  = 3
-poly_file = joinpath(@__DIR__, "240426_output/knots_dilutions_$(n_interv)_polynome_3rep.txt")
+poly_file = joinpath(@__DIR__, "../input/polynome.txt")
 φ_global, intervals = parse_polynome(poly_file)
 
 ## ===== PLOT =====
-mkpath(joinpath(@__DIR__, "030526_output"))
-
 color_phi_import = RGB(255/255, 127/255, 14/255)
 model_colors = Dict(
     "SRVi"  => RGB(0.2, 0.6, 0.2),
@@ -249,4 +247,4 @@ for t_change in cycle_changes
 end
 
 display(pl_phi)
-savefig(pl_phi, joinpath(@__DIR__, "030526_output/phi_eff_comparison.png"))
+savefig(pl_phi, joinpath(@__DIR__, "260503_output/phi_eff_comparison.png"))
