@@ -1,0 +1,34 @@
+===== Run log =====
+Date        : 2026-06-15T14:46:10.151
+Model       : SRVi
+Model file  : /Users/loudodin/PhD/GitHub/dodin_phd/modelisation/2606/260615/local/models/model_SRVi_alpha_fix.jl
+n_runs      : 1
+cycles_fit  : 5
+cycles_sim  : 5
+replicates  : ["A", "B", "C"]
+ϕ_combi     : 3_2_2_3_2
+prop_R_0    : 0
+
+===== Fixed parameters =====
+  r = 0.574619342477644
+  K = 6.675449070379925e7
+  β = 144.0
+  δ = 0.02
+
+===== Search bounds =====
+  log-space fit : true
+  α  ∈ [1.0e-10, 10]  — mutation rate S→R
+  φ  ∈ [1.0e-14, 1.0e-7]  — interaction rate
+
+===== All runs =====
+  Run 1 (seed=1001) : loss=79.57127745546181  α=1.6179882409883493e-5  φ=5.458443669387811e-9
+
+===== Best result =====
+  Loss = 79.57127745546181
+  α = 1.6179882409883493e-5  (mutation rate S→R)
+  φ = 5.458443669387811e-9  (interaction rate)
+
+===== Polynomial =====
+  File        : /Users/loudodin/PhD/GitHub/dodin_phd/modelisation/2606/260615/local/../../260604/genotoul/output/nint_3_2_2_3_2/polynomial.txt
+  n_intervals : 17
+  best_fitness : 3.37917394

@@ -154,17 +154,21 @@ display(plot(t_plot, ϕ_prime.(t_plot), lw=2, xlabel="time (days)", ylabel="ϕ'(
 
 
 
-## ===== Temps commun + moyenne des réplicats =====
+## ===== Moyenne des réplicats par cycle =====
 
-function average_over_replicates(replicates, raw_data, t_field::Symbol, val_field::Symbol)
-    t_all = sort(unique(vcat([vcat([e[t_field] for e in raw_data[rep]]...) for rep in replicates]...)))
-    
+function average_over_replicates_cycle(replicates, raw_data, cyc_idx, t_field::Symbol, val_field::Symbol)
+    t_all = sort(unique(vcat([
+        raw_data[rep][cyc_idx][t_field]
+        for rep in replicates if cyc_idx <= length(raw_data[rep])
+    ]...)))
+
     val_all = Vector{Float64}(undef, length(t_all))
     for (i, t) in enumerate(t_all)
         vals = Float64[]
         for rep in replicates
-            t_rep   = vcat([e[t_field]   for e in raw_data[rep]]...)
-            val_rep = vcat([e[val_field] for e in raw_data[rep]]...)
+            cyc_idx > length(raw_data[rep]) && continue
+            t_rep   = raw_data[rep][cyc_idx][t_field]
+            val_rep = raw_data[rep][cyc_idx][val_field]
             idx = findfirst(x -> isapprox(x, t; atol=1e-10), t_rep)
             idx !== nothing && push!(vals, val_rep[idx])
         end
@@ -173,62 +177,31 @@ function average_over_replicates(replicates, raw_data, t_field::Symbol, val_fiel
     return t_all, val_all
 end
 
-t_H_all, H_all = average_over_replicates(replicates, raw_data, :tH, :H)
-t_V_all, V_all = average_over_replicates(replicates, raw_data, :tV, :V)
 
-t_all  = sort(unique(vcat(t_H_all, t_V_all)))  # fixed: vcat instead of two-arg unique
-phi_all = ϕ_prime.(t_all)
+## ===== Export CSV par cycle =====
 
+mkpath("modelisation/output")
 
+for cyc_idx in 1:cycles_sim
+    # Vérifie qu'au moins un réplicat a ce cycle
+    any(cyc_idx <= length(raw_data[rep]) for rep in replicates) || continue
 
-## ===== Comparaison t_H_all vs t_V_all =====
+    t_H, H_cyc = average_over_replicates_cycle(replicates, raw_data, cyc_idx, :tH, :H)
+    t_V, V_cyc = average_over_replicates_cycle(replicates, raw_data, cyc_idx, :tV, :V)
 
-only_in_H = setdiff(t_H_all, t_V_all)
-only_in_V = setdiff(t_V_all, t_H_all)
-in_both   = intersect(t_H_all, t_V_all)
+    t_phi = sort(unique(vcat(t_H, t_V)))
+    phi_cyc = ϕ_prime.(t_phi)
 
-println("=== Résumé ===")
-println("  t_H_all : $(length(t_H_all)) points")
-println("  t_V_all : $(length(t_V_all)) points")
-println("  En commun       : $(length(in_both))")
-println("  Seulement en H  : $(length(only_in_H))")
-println("  Seulement en V  : $(length(only_in_V))")
+    CSV.write("modelisation/output/H_cycle$(cyc_idx).csv",
+        DataFrame(t = t_H, H = H_cyc))
 
-if !isempty(only_in_H)
-    println("\n--- Points présents dans t_H_all mais pas t_V_all ---")
-    for t in only_in_H
-        println("  t = $t")
-    end
+    CSV.write("modelisation/output/V_cycle$(cyc_idx).csv",
+        DataFrame(t = t_V, V = V_cyc))
+
+    CSV.write("modelisation/output/phi_cycle$(cyc_idx).csv",
+        DataFrame(t = t_phi, phi = phi_cyc))
+
+    println("Cycle $cyc_idx exporté.")
 end
 
-if !isempty(only_in_V)
-    println("\n--- Points présents dans t_V_all mais pas t_H_all ---")
-    for t in only_in_V
-        println("  t = $t")
-    end
-end
-
-# Vérification des quasi-doublons (même valeur à la précision flottante près)
-println("\n--- Quasi-doublons potentiels (|Δt| < 1e-8) entre H-only et V-only ---")
-found = false
-for th in only_in_H, tv in only_in_V
-    if abs(th - tv) < 1e-8
-        println("  t_H=$th  ≈  t_V=$tv  (Δ=$(th-tv))")
-        found = true
-    end
-end
-found || println("  Aucun")
-
-
-## ===== Export CSV =====
-
-CSV.write("modelisation/output/H.csv",
-    DataFrame(t = t_H_all, H = H_all))
-
-CSV.write("modelisation/output/V.csv",
-    DataFrame(t = t_V_all, V = V_all))
-
-CSV.write("modelisation/output/phi.csv",
-    DataFrame(t = t_all, phi = phi_all))
-
-println("Export terminé :")
+println("Export terminé.")
