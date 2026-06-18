@@ -1,0 +1,28 @@
+===== Run log =====
+Date        : 2026-06-18T15:12:54.720
+Model       : SR_RS
+Model file  : /Users/loudodin/PhD/GitHub/dodin_phd/modelisation/2606/260618_B/local/models/SR_RS.jl
+n_runs      : 1
+cycles_fit  : 5
+cycles_sim  : 5
+replicates  : ["A", "B", "C"]
+
+===== Fixed parameters =====
+  r = 0.574619342477644
+  K = 6.675449070379925e7
+  β = 144.0
+  δ = 0.02
+
+===== Search bounds =====
+  c  ∈ [1.0e-10, 1]  — total rate (α+β)
+  p  ∈ [1.0e-10, 1]  — fraction allocated to α
+  φ  ∈ [1.0e-14, 1.0e-5]  — interaction rate
+
+===== All runs =====
+  Run 1 (seed=1001) : loss=6.94391296930691  c=0.009462446210917757  p=0.002266806340634738  φ=6.605476646330676e-9
+
+===== Best result =====
+  Loss = 6.94391296930691
+  c = 0.009462446210917757  (total rate (α+β))
+  p = 0.002266806340634738  (fraction allocated to α)
+  φ = 6.605476646330676e-9  (interaction rate)

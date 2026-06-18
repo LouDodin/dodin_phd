@@ -1,0 +1,30 @@
+===== Run log =====
+Date        : 2026-06-18T10:58:20.146
+Model       : SR_RS_leaky
+Model file  : /Users/loudodin/PhD/GitHub/dodin_phd/modelisation/2606/260618/local/models/SR_RS_leaky.jl
+n_runs      : 1
+cycles_fit  : 5
+cycles_sim  : 5
+replicates  : ["A", "B", "C"]
+
+===== Fixed parameters =====
+  r = 0.574619342477644
+  K = 6.675449070379925e7
+  β = 144.0
+  δ = 0.02
+
+===== Search bounds =====
+  α  ∈ [1.0e-10, 10]  — mutation rate S→R
+  γ  ∈ [1.0e-10, 10]  — reversion rate R→S
+  φ  ∈ [1.0e-14, 1.0e-7]  — interaction rate
+  λ  ∈ [1.0e-14, 1.0]  — leakage parameter
+
+===== All runs =====
+  Run 1 (seed=1001) : loss=6.9439129693121435  α=2.1449523075019138e-5  γ=0.009440996628941588  φ=6.605475196771813e-9  λ=1.5655365559256048e-14
+
+===== Best result =====
+  Loss = 6.9439129693121435
+  α = 2.1449523075019138e-5  (mutation rate S→R)
+  γ = 0.009440996628941588  (reversion rate R→S)
+  φ = 6.605475196771813e-9  (interaction rate)
+  λ = 1.5655365559256048e-14  (leakage parameter)
