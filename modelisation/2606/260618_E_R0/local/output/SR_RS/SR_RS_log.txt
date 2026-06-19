@@ -1,0 +1,39 @@
+===== Run log =====
+Date        : 2026-06-19T09:10:20.718
+Model       : SR_RS
+Model file  : /Users/loudodin/PhD/GitHub/dodin_phd/modelisation/2606/260618_E_R0/local/models/SR_RS.jl
+n_runs      : 1
+cycles_fit  : 5
+cycles_sim  : 5
+replicates  : ["A", "B", "C"]
+
+===== Fixed parameters =====
+  r = 0.574619342477644
+  K = 6.675449070379925e7
+  β = 144.0
+  δ = 0.02
+
+===== Search bounds =====
+  c  ∈ [1.0e-10, 1]  — total rate (α+β)
+  p  ∈ [1.0e-10, 1]  — fraction allocated to α
+  ϕ  ∈ [1.0e-14, 1.0e-7]  — interaction rate
+  prop_S0  ∈ [0.5, 1.1]  — proportion of hosts that are susceptible at the beggining of cycle 1
+
+===== All runs =====
+  Run 1 (seed=1001) : loss=73.40673110138215  c=0.15734663065488994  p=0.9651016293172309  ϕ=9.99999999999907e-8  prop_S0=0.8356402600902905
+
+===== Best result =====
+  Loss = 73.40673110138215
+  c = 0.15734663065488994  (total rate (α+β))
+  p = 0.9651016293172309  (fraction allocated to α)
+  ϕ = 9.99999999999907e-8  (interaction rate)
+  prop_S0 = 0.8356402600902905  (proportion of hosts that are susceptible at the beggining of cycle 1)
+
+===== Information Criteria =====
+  n_obs = 320
+  k     = 4  (fitted params)
+  RSS   = 1314.0482814185511
+  logL  = -680.0678420535719
+  AIC   = 1368.1356841071438
+  AICc  = 1368.262668234128
+  BIC   = 1383.2089680903189

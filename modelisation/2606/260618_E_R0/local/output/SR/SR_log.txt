@@ -1,0 +1,37 @@
+===== Run log =====
+Date        : 2026-06-19T08:54:01.901
+Model       : SR
+Model file  : /Users/loudodin/PhD/GitHub/dodin_phd/modelisation/2606/260618_E_R0/local/models/SR.jl
+n_runs      : 1
+cycles_fit  : 5
+cycles_sim  : 5
+replicates  : ["A", "B", "C"]
+
+===== Fixed parameters =====
+  r = 0.574619342477644
+  K = 6.675449070379925e7
+  β = 144.0
+  δ = 0.02
+
+===== Search bounds =====
+  α  ∈ [1.0e-10, 10]  — mutation rate S→R
+  ϕ  ∈ [1.0e-14, 1.0e-7]  — interaction rate
+  prop_S0  ∈ [1.0e-5, 1]  — proportion of hosts that are susceptible at the beggining of cycle 1
+
+===== All runs =====
+  Run 1 (seed=1001) : loss=222.82186250282308  α=3.175107753982258e-8  ϕ=6.845490103711727e-8  prop_S0=0.0027263965595981906
+
+===== Best result =====
+  Loss = 222.82186250282308
+  α = 3.175107753982258e-8  (mutation rate S→R)
+  ϕ = 6.845490103711727e-8  (interaction rate)
+  prop_S0 = 0.0027263965595981906  (proportion of hosts that are susceptible at the beggining of cycle 1)
+
+===== Information Criteria =====
+  n_obs = 320
+  k     = 3  (fitted params)
+  RSS   = 3381.7406546805464
+  logL  = -831.3123060999087
+  AIC   = 1668.6246121998174
+  AICc  = 1668.7005615669061
+  BIC   = 1679.9295751871987

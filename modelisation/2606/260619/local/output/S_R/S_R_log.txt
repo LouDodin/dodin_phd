@@ -1,0 +1,33 @@
+===== Run log =====
+Date        : 2026-06-19T09:00:35.836
+Model       : S_R
+Model file  : /Users/loudodin/PhD/GitHub/dodin_phd/modelisation/2606/260618_D_no_R0/local/models/S_R.jl
+n_runs      : 1
+cycles_fit  : 5
+cycles_sim  : 5
+replicates  : ["A", "B", "C"]
+
+===== Fixed parameters =====
+  r = 0.574619342477644
+  K = 6.675449070379925e7
+  β = 144.0
+  δ = 0.02
+
+===== Search bounds =====
+  ϕ  ∈ [1.0e-14, 1.0e-7]  — interaction rate
+
+===== All runs =====
+  Run 1 (seed=1001) : loss=140.3630520625526  ϕ=7.825190486177797e-11
+
+===== Best result =====
+  Loss = 140.3630520625526
+  ϕ = 7.825190486177797e-11  (interaction rate)
+
+===== Information Criteria =====
+  n_obs = 320
+  k     = 1  (fitted params)
+  RSS   = 2331.7450807794858
+  logL  = -771.8285277682235
+  AIC   = 1545.657055536447
+  AICc  = 1545.669634152799
+  BIC   = 1549.4253765322408
