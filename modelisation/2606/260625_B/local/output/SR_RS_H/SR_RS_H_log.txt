@@ -1,0 +1,37 @@
+===== Run log =====
+Date        : 2026-06-25T13:43:45.856
+Model       : SR_RS_H
+Model file  : /Users/loudodin/PhD/GitHub/dodin_phd/modelisation/2606/260625_B/local/models/SR_RS_H.jl
+n_runs      : 1
+cycles_fit  : 5
+cycles_sim  : 5
+replicates  : ["A", "B", "C"]
+
+===== Fixed parameters =====
+  r = 0.574619342477644
+  K = 6.675449070379925e7
+  β = 144.0
+  δ = 0.02
+
+===== Search bounds =====
+  eps_H  ∈ [1.0e-10, 1]  — total rate (α+β)
+  K_H  ∈ [1.0e-10, 1.0e10]  — Kp
+  ϕ  ∈ [1.0e-14, 1.0e-7]  — interaction rate
+
+===== All runs =====
+  Run 1 (seed=1001) : loss=6.876025654286958  eps_H=0.00957801761003519  K_H=7.623436287130594e8  ϕ=6.613005166581376e-9
+
+===== Best result =====
+  Loss = 6.876025654286958
+  eps_H = 0.00957801761003519  (total rate (α+β))
+  K_H = 7.623436287130594e8  (Kp)
+  ϕ = 6.613005166581376e-9  (interaction rate)
+
+===== Information Criteria =====
+  n_obs = 320
+  k     = 3  (fitted params)
+  RSS   = 67.93968511808215
+  logL  = -206.10822378102165
+  AIC   = 418.2164475620433
+  AICc  = 418.2923969291319
+  BIC   = 429.5214105494246
