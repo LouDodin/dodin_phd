@@ -26,7 +26,7 @@ const n_runs      = 1
 const λ = 0
 
 # Limit display to a specific knot (nothing = no limit, or specify knot index)
-const knot_limit = 1#nothing  # Set to knot index (e.g., 3) to limit display
+const knot_limit = nothing  # Set to knot index (e.g., 3) to limit display
 
 
 ## ===== Colors =====

@@ -15,7 +15,7 @@ using Colors
 
 
 ## ===== Choices =====
-const MODEL_FILE = joinpath(@__DIR__, "models/SR_RS.jl")
+const MODEL_FILE = joinpath(@__DIR__, "models/S_R.jl")
 const replicates  = ["A", "B", "C"]
 const cycles_fit  = 5
 const cycles_sim  = 5
@@ -261,7 +261,6 @@ println("  BIC   = $(round(BIC,       sigdigits=6))")
 
 ## ===== Phi_ref =====
 const poly_file = "modelisation/2606/260604/genotoul/output/nint_3_2_2_3_2/polynomial.txt"
-
 
 lines = readlines(poly_file)
 

@@ -1,0 +1,43 @@
+===== Run log =====
+Date        : 2026-06-23T12:26:35.214
+Model       : SR_RS
+Model file  : /Users/loudodin/PhD/GitHub/dodin_phd/modelisation/2606/260623/local/models/SR_RS.jl
+n_runs      : 1
+cycles_fit  : 5
+cycles_sim  : 5
+replicates  : ["A", "B", "C"]
+n_interior  : [0, 0, 0, 0, 0]
+N_KNOTS     : 6
+N_PARAMS    : 13  (1 ϕ + 6 c-knots + 6 p-knots)
+
+===== Fixed parameters =====
+  r = 0.574619342477644
+  K = 6.675449070379925e7
+  β = 144.0
+  δ = 0.02
+
+===== Spline knots =====
+  knot[1] = 0.0 days
+  knot[2] = 24.7708 days
+  knot[3] = 34.4375 days
+  knot[4] = 43.1042 days
+  knot[5] = 55.8542 days
+  knot[6] = 65.6667 days
+
+===== All runs =====
+  Run 1 (seed=1001) : loss=3.785330582685647
+
+===== Best result =====
+  Loss = 3.785330582685647
+  ϕ    = 6.082588926580918e-9
+  c at knots : [0.00026450387808880064, 0.0035735629136731486, 0.005935546225681275, 0.013929524677504588, 0.014158088642815675, 0.0336389188136093]
+  p at knots : [0.14435152500929194, 1.1157190537984338e-10, 1.0389559955980383e-10, 0.020781920184448046, 0.40244110128025606, 1.0807946686665227e-10]
+
+===== Information Criteria =====
+  n_obs = 320
+  k     = 13  (fitted params)
+  RSS   = 39.49651293469546
+  logL  = -119.32295335862989
+  AIC   = 264.6459067172598
+  AICc  = 265.8354492009199
+  BIC   = 313.6340796625788
