@@ -1,0 +1,45 @@
+===== Run log =====
+Date        : 2026-06-29T12:24:27.047
+Model       : SV_beta
+Model file  : /Users/loudodin/PhD/GitHub/dodin_phd/modelisation/2606/260629/local/models/SV_beta.jl
+n_runs      : 1
+cycles_fit  : 5
+cycles_sim  : 5
+replicates  : ["A", "B", "C"]
+n_interior  : [1, 1, 1, 1, 1]
+N_KNOTS     : 11
+
+===== Fixed parameters =====
+  r = 0.574619342477644
+  K = 6.675449070379925e7
+  δ = 0.02
+
+===== Spline knots =====
+  knot[1] = 0.0 days
+  knot[2] = 12.3854 days
+  knot[3] = 24.7708 days
+  knot[4] = 29.6042 days
+  knot[5] = 34.4375 days
+  knot[6] = 38.7708 days
+  knot[7] = 43.1042 days
+  knot[8] = 49.4896 days
+  knot[9] = 55.8542 days
+  knot[10] = 60.7604 days
+  knot[11] = 65.6667 days
+
+===== All runs =====
+  Run 1 (seed=1001) : loss=45.097139268821614
+
+===== Best result =====
+  Loss = 45.097139268821614
+  ϕ         : 3.0493067273653807e-9
+  β at knots : [499.9999999978118, 1.0000000000050289, 20.592368883356535, 3.5596485354028724, 9.542761028606906, 16.06061004629429, 12.741214742371714, 6.612949849919597, 1.0430152046127403, 21.478871985939563, 1.1830274913731944]
+
+===== Information Criteria =====
+  n_obs = 320
+  k     = 12  (fitted params)
+  RSS   = 795.0191558269465
+  logL  = -599.6675648575076
+  AIC   = 1223.3351297150152
+  AICc  = 1224.3514163599664
+  BIC   = 1268.5549816645405

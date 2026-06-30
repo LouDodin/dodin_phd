@@ -1,0 +1,37 @@
+===== Run log =====
+Date        : 2026-06-29T16:57:04.710
+Model       : ViVd_VdVi
+Model file  : /Users/loudodin/PhD/GitHub/dodin_phd/modelisation/2606/260629_B/local/models/ViVd_VdVi.jl
+n_runs      : 1
+cycles_fit  : 5
+cycles_sim  : 5
+replicates  : ["A", "B", "C"]
+
+===== Fixed parameters =====
+  r = 0.574619342477644
+  K = 6.675449070379925e7
+  β = 144.0
+  δ = 0.02
+
+===== Search bounds =====
+  ϕ  ∈ [1.0e-14, 1.0e-7]  — interaction rate
+  ε  ∈ [1.0e-6, 1]  — proportion of secreted non-infectious viruses
+  ζ  ∈ [1.0e-8, 1]  — Vd->Vi rate
+
+===== All runs =====
+  Run 1 (seed=1001) : loss=128.31045009512488  ϕ=5.964062076815738e-10  ε=0.9999999997786826  ζ=0.040658322826782015
+
+===== Best result =====
+  Loss = 128.31045009512488
+  ϕ = 5.964062076815738e-10  (interaction rate)
+  ε = 0.9999999997786826  (proportion of secreted non-infectious viruses)
+  ζ = 0.040658322826782015  (Vd->Vi rate)
+
+===== Information Criteria =====
+  n_obs = 320
+  k     = 3  (fitted params)
+  RSS   = 2149.5111438026634
+  logL  = -758.8082865453068
+  AIC   = 1523.6165730906137
+  AICc  = 1523.6925224577024
+  BIC   = 1534.921536077995
