@@ -1,0 +1,46 @@
+Il faut bien distinguer deux échelles :
+
+γR(t) est le taux instantané de bascule R→S : à chaque instant, chacune des R(t) cellules résistantes bascule vers S avec un taux γ 
+(indépendamment). Le processus de comptage des bascules est donc un processus de Poisson non-homogène de taux λ(t) = γR(t).
+Le nombre moyen de bascules observées entre 0 et Δt est l'intégrale de ce taux :
+Λ(Δt) = ∫₀^Δt γ·R(t) dt
+(c'est l'analogue exact de votre ancien λ_per_well = γ·N_R·Δt, sauf qu'avant R était supposé constant = N_R, donc l'intégrale se simplifiait 
+en un produit).
+Ensuite, comme avant : P(≥1 bascule dans un puits) = 1 − exp(−Λ(Δt)), et pour N_wells puits indépendants, 
+P(≥1 puits touché) = 1 − exp(−N_wells·Λ(Δt)) (somme de Poisson = Poisson des moyennes).
+
+Il ne reste qu'à calculer R(t) à partir de dR/dt = rR(1−R/K) − γR. C'est encore une logistique, avec taux effectif ρ = r−γ et capacité 
+effective K_eff = K·ρ/r, donc solution fermée :
+R(t) = K_eff / (1 + A·e^(−ρt)),  A = (K_eff − R0)/R0
+(cas dégénéré si r≈γ : R(t) = R0/(1+(r/K)R0·t)).
+J'utilise cette formule fermée pour R(t), puis j'intègre numériquement γR(t) (trapèzes sur une grille fine) pour obtenir Λ(Δt), 
+interpolée sur votre grille de Δt existante.
+
+
+
+
+C'est parfaitement cohérent avec le modèle — la confusion vient de la différence entre le temps de latence d'une seule cellule et le 
+temps d'attente de la première bascule dans toute la population.
+1/γ = 105 jours, c'est le temps moyen qu'attend une cellule R donnée avant de basculer. Mais vous avez ~N_R = 100 000 cellules R par 
+puits, chacune bascule indépendamment avec le même taux γ. Le temps d'attente de la première bascule parmi N cellules indépendantes suit 
+une loi exponentielle de taux N·γ (et non γ) :
+
+taux agrégé = N_R · γ = 1e5 × 9.478e-3 ≈ 948 événements/jour par puits
+soit ≈ 39,5 événements attendus par heure par puits (Λ ≈ 39,5 pour Δt = 1h)
+
+Donc P(0 bascule en 1h dans un puits) = exp(−39,5) ≈ 6×10⁻¹⁸, c'est-à-dire P(≥1) ≈ 1 - 6×10⁻¹⁸, très largement > 99,99 %. C'est le résultat 
+classique du minimum de N variables exponentielles i.i.d. : min(Exp(γ), …, Exp(γ)) (N fois) ~ Exp(N·γ), de moyenne 1/(Nγ) et non 1/γ.
+Avec N=1e5 cellules, le temps moyen d'attente de la première bascule dans le puits est en fait :
+1/(N·γ) = 1/948 jour ≈ 1,5 minute, pas 105 jours.
+Les 105 jours ne redeviennent pertinents que si vous regardez une cellule isolée, ou un scénario où N_R est petit (peu de cellules résistantes, 
+par exemple juste après une forte réduction de population). 
+
+each cell independently has the same low probability, but across many independent trials, the likelihood that at least one event occurs becomes 
+substantial
+Niveau cellule unique : une cellule R a un taux de bascule γ = 9,478×10⁻³ j⁻¹. Sa probabilité de basculer en 1h est bien minuscule :
+p_cellule = 1 − exp(−γ·Δt) ≈ γ·Δt ≈ 9,478e-3/24 ≈ 3,95×10⁻⁴ (0,04 %). Très rare, cohérent avec 1/γ = 105 jours en moyenne.
+Niveau population (le puits) : vous n'avez pas une cellule qui joue au dé, vous en avez 100 000, indépendamment, en même temps. La probabilité 
+qu'aucune des 100 000 ne bascule est :
+P(0 bascule) = (1 − p_cellule)^N ≈ exp(−N·γ·Δt) = exp(−39,5) ≈ 6×10⁻¹⁸
+Donc la probabilité qu'au moins une bascule ait lieu est quasi 1. Ce n'est pas que les cellules deviennent individuellement plus susceptibles 
+de basculer — c'est juste que vous multipliez un événement rare par un très grand nombre d'essais indépendants.
